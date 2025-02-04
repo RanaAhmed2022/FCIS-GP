@@ -1,0 +1,106 @@
+/* Ensure the background covers the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0, #b3d9ff);
+    font-family: Arial, sans-serif;
+}
+
+/* Center the form and make it responsive */
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #ffffff, #cfd8dc, #1e90ff);
+    height: 100vh; /* Take full height of the viewport */
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.registration-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-register {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+}
+
+.already-account {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.already-account a {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.already-account a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    margin-top: 20px;
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .registration-form {
+    padding: 15px;
+    }
+
+    .title {
+    font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-form {
+    padding: 20px;
+    }
+
+    .title {
+    font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,175 @@
+/* Main Container */
+.welcome-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 7%;
+    background-image: url('./../../assets/images/welcome-background.jpg'); /* Change to your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Text Section - Now on Left */
+.text-container {
+    max-width: 65%;
+    text-align: left;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+}
+
+.highlight-developer {
+    color: hotpink;
+}
+
+.highlight-teams {
+    color: aqua;
+}
+
+.highlight-businesses {
+    color: green;
+}
+
+/* Button Section - Now on Right */
+.button-container {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+}
+
+/* Button Styling */
+/* Button Styling */
+.action-button {
+    background-color: #0f99a0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+/* Hover Effect: Swap Background and Text Color */
+.action-button:hover {
+    background-color: white;
+    color: #0f99a0;
+    transform: scale(1.05);
+}
+
+
+/* Responsive Design */
+
+/* For iPads and Tablets */
+/* @media (max-width: 1024px) {
+    .welcome-container {
+        flex-direction: column;
+        padding: 0 10%;
+    }
+
+    .text-container {
+        max-width: 100%;
+        text-align: left; /* Keep text on the left side 
+    }
+
+    .title {
+        font-size: 4rem; /* Smaller text 
+    }
+
+    .subtitle {
+        font-size: 1.7rem; /* Smaller subtitle 
+    }
+
+    .button-container {
+        flex-direction: row; /* Buttons stay in line 
+        justify-content: center;
+    }
+
+    .action-button {
+        width: auto;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* For Tablets (Portrait and Smaller Screens) 
+@media (max-width: 768px) {
+    .welcome-container {
+        flex-direction: column;
+        padding: 0 10%;
+    }
+
+    .text-container {
+        max-width: 100%;
+        text-align: left; /* Keep text on the left side 
+    }
+
+    .title {
+        font-size: 3rem; /* Smaller text 
+    }
+
+    .subtitle {
+        font-size: 1.5rem; /* Smaller subtitle 
+    }
+
+    .button-container {
+        flex-direction: row; /* Buttons stay in line 
+        justify-content: center;
+    }
+
+    .action-button {
+        width: auto;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* For Mobile Phones 
+@media (max-width: 480px) {
+    .welcome-container {
+        flex-direction: column;
+        padding: 0 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-container {
+        text-align: center; /* Center the text 
+    }
+
+    .title {
+        font-size: 2.2rem; /* Smaller text 
+    }
+
+    .subtitle {
+        font-size: 1.2rem; /* Smaller subtitle 
+    }
+
+    .button-container {
+        flex-direction: row; /* Buttons side by side 
+        gap: 1rem;
+        justify-content: center;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .action-button {
+        width: 45%; /* Make buttons smaller and next to each other 
+        padding: 1rem;
+        font-size: 1rem;
+    }
+} */

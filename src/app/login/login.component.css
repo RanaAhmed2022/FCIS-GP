@@ -1,0 +1,345 @@
+/* Overall Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+/* Login Box */
+.login-box {
+    background: #121212;
+    border-radius: 12px;
+    padding: 30px;
+    width: 800px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    /* Thin white border */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Titles */
+.login-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Two-Column Layout */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Needed for the separator line */
+}
+
+.login-options::before {
+    content: "";
+    position: absolute;
+    left: 40%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2); /* Thin white border */
+    transform: translateX(-50%);
+}
+
+/* Left Side (Wallet Buttons) */
+.wallet-login {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.wallet-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.wallet-button {
+    background: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.wallet-button:hover {
+    background: #292929;
+    transform: scale(1.1);
+}
+
+/* Icons inside buttons */
+.icon {
+    width: 25%;
+    height: 25%;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+
+/* Highlight the first button */
+.social-login {
+    background: #0f99a0;
+}
+
+/* Right Side (Login Options) */
+.auth-login {
+    width: 50%;
+    text-align: center;
+}
+
+.auth-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-right: 50px;
+
+}
+
+/* Social Icons */
+.icon-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    background: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Adds space between the icon and the border */
+    margin: 10px; /* Adds space between each icon */
+    background-color: transparent; /* Optional */
+}
+
+
+
+
+
+
+
+/* OR Divider */
+.or-divider {
+    color: white;
+    margin: 10px 0;
+    font-size: 14px;
+
+    /* display: block; */
+    margin-top: 25px; /* Adjust the value as needed */
+    margin-bottom: 25px; /* Adjust the value as needed */
+}
+
+
+/* Input Fields */
+.input-field {
+    width: 90%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #1e1e1e;
+    color: white;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* Input Container for Phone Input */
+/* .input-container {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 12px;
+    width: 90%; /* Matches email input width 
+}
+
+.input-container .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.input-container input {
+    border: none;
+    background: transparent;
+    color: white;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    padding: 6px;
+} */
+
+
+
+
+/* .contact-info {
+    margin-top: 15px; /* Moves both email and phone down 
+} */
+
+
+
+:root {
+    --radius: 8px;
+    --primary: #377dff;
+    --foreground: #ffffff;
+    --border: #333333;
+}
+
+.email-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid hsl(0, 0%, 15%);
+    border-radius: 8px;
+    /* padding: 12px; */
+    gap: 12px;
+    background: none;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.email-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    color: var(--foreground);
+    font-size: 16px;
+    outline: none;
+}
+
+.email-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* .email-button {
+    background-color: var(--primary);
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-button svg {
+    fill: var(--foreground);
+} */
+
+
+
+
+
+
+
+
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid hsl(0, 0%, 15%);
+    border-radius: 8px;
+    padding: 12px;
+    gap: 12px;
+    background: none;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 30px;
+
+}
+
+.phone-input svg {
+    color: hsl(221, 83%, 54%);
+}
+
+.phone-input input {
+    all: unset;
+    flex-grow: 1;
+    font-size: 14px;
+    color: hsl(0, 0%, 98%);
+}
+
+
+
+
+
+
+
+
+
+/* Option Buttons */
+/* .option-button {
+    width: 100%;
+    background: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.option-button:hover {
+    background: #292929;
+} */
+
+/* Terms */
+.terms-text {
+    font-size: 12px;
+    color: gray;
+    margin-top: 15px;
+}
+
+.terms-text a {
+    color: #0f99a0;
+    text-decoration: none;
+}
+
+.powered-text {
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;
+}
