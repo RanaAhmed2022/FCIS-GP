@@ -10,46 +10,64 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
-  // Use index signature to allow dynamic property access
-  formData: { [key: string]: string | File | null } = {
-    idPhoto: null,
-    fullName: '',
-    nationalId: '',
-    phoneNumber: '',
-    personalPhoto: null
-  };
 
-  submissionMessage: string | null = null; // To store the message
-
-  // Handle file input changes
-  onFileChange(event: any, field: keyof typeof this.formData) {
-    const file = event.target.files[0];
-    this.formData[field] = file;
+  submitForm(ev : any){
+    ev.preventDefault()
   }
-
-  // Handle text input changes
-  onInputChange(event: any, field: keyof typeof this.formData) {
-    const value = event.target.value;
-    this.formData[field] = value;
-  }
-
-  // Handle form submission
-  onSubmit(event: Event) {
+  register(event: Event) {
     event.preventDefault();
-    this.submissionMessage =
-      'It will spend for about 2 days to verify your identity, please wait';
-  }
 
+    const username = (document.getElementById('username') as HTMLInputElement).value;
+    const idNumber = (document.getElementById('idNumber') as HTMLInputElement).value;
+    const phone = (document.getElementById('phone') as HTMLInputElement).value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+    const idImage = (document.getElementById('idImage') as HTMLInputElement).files?.[0];
+    const password = (document.getElementById('password') as HTMLInputElement).value;
+    const confirmPassword = (document.getElementById('confirmPassword') as HTMLInputElement).value;
+    const passwordError = document.getElementById('passwordError');
 
-  onRegisterClick() {
-    // Get the verification message element by its ID
-    const verificationMessage = document.getElementById('verificationMessage');
-
-    if (verificationMessage) {
-      // Show the verification message
-      verificationMessage.style.display = 'block';
+    // Validate ID Number
+    if (!/^\d{14}$/.test(idNumber)) {
+      alert('ID must be exactly 14 digits.');
+      return;
     }
+
+    // Validate Phone Number
+    if (!/^(011|012|010|015)\d{8}$/.test(phone)) {
+      alert('Phone number must start with 011, 012, 010, or 015 and be 11 digits long.');
+      return;
+    }
+
+    // Validate Email
+    if (!email.endsWith('@gmail.com')) {
+      alert('Email must be a Gmail address.');
+      return;
+    }
+
+  //   function displayFileName(input) {
+  //     const fileName = input.files.length > 0 ? input.files[0].name : "No file chosen";
+  //     document.getElementById("file-name").textContent = fileName;
+  // }
+  
+
+    // Validate Password
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
+    if (!passwordRegex.test(password)) {
+      passwordError!.textContent = 'Password must be at least 8 characters, include at least one uppercase letter and lowercase letter, at least one number and one special character.';
+      return;
+    } else {
+      passwordError!.textContent = '';
+    }
+
+    // Confirm Password
+    if (password !== confirmPassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+
+    // Successful Submission
+    alert('Registration successful!');
+    console.log({ username, idNumber, phone, email, idImage, password });
+    
   }
-
-
 }

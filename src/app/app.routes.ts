@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AddnewvoteComponent } from './addnewvote/addnewvote.component';
 
 export const routes: Routes = [
     {
@@ -27,7 +28,12 @@ export const routes: Routes = [
         component : LoginComponent
     },
     {
+        path : 'addnewvote',
+        component : AddnewvoteComponent
+    },
+    {
         path : '**',
         redirectTo : 'welcome'
-    } //redirect unknown paths to welcome
+    }//redirect unknown paths to welcome
+    
 ];

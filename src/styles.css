@@ -1,21 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    overflow-x: hidden;
-} */
-
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Urbanist";
+	transition: 0.5s;
 }
 
 body {
@@ -31,4 +21,102 @@ a {
 
 ul {
     list-style: none;
+}
+
+p,
+li,
+a {
+	font-family: "Urbanist", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+	font-family: "Kanit", sans-serif;
+}
+::-webkit-scrollbar {
+	width: 10px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #202020;
+	border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-track{
+	background-color: aliceblue;
+}
+
+/* Original Font sizes*/
+p {
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+/* Media Queries */
+/* 1- Mobile */
+@media only screen and (max-width: 600px) {
+	p {
+		font-size: 16px;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 26px;
+	}
+
+	h3 {
+		font-size: 22px;
+	}
+
+	h4 {
+		font-size: 18px;
+	}
+}
+
+/* 2- Tablet */
+@media only screen and (max-width: 768px) {
+	p {
+		font-size: 16px;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	h4 {
+		font-size: 18px;
+	}
 }

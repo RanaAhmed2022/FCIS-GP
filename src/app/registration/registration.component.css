@@ -1,106 +1,291 @@
-/* Ensure the background covers the entire page */
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #ffffff, #e0e0e0, #b3d9ff);
-    font-family: Arial, sans-serif;
+
+/* Overall Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../assets/images/loggg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
 
-/* Center the form and make it responsive */
-.registration-container {
+/* Login Box */
+.login-box {
+    background: rgba(18, 18, 18, 0.7);
+    border-radius: 12px;
+    padding: 30px;
+    width: 680px;
+    box-shadow: 0px 4px 15px rgba(131, 131, 131, 0.4);
+    text-align: center;
+
+    /* Thin white border */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* Two-Column Layout */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Needed for the separator line */
+}
+
+.login-options::before {
+    content: "";
+    position: absolute;
+    left: 40%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2); /* Thin white border */
+    transform: translateX(-50%);
+}
+
+/* Left Side (Wallet Buttons) */
+.wallet-login {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to bottom right, #ffffff, #cfd8dc, #1e90ff);
-    height: 100vh; /* Take full height of the viewport */
+    width: 30%;
 }
 
-.title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 50px;
+
+.wallet-button {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    color: white;
+    border: none;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.wallet-button:hover {
+    background: #292929;
+    transform: scale(1.1);
+}
+
+/* Icons inside buttons */
+.icon {
+    width: 25%;
+    height: 25%;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+
+/* Right Side (Login Options) */
+.auth-login {
+    width: 55%;
     text-align: center;
 }
 
-.registration-form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.btn-register {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 10px;
+/* Social Icons */
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     border: none;
-    border-radius: 5px;
+    margin: 10px 5px;
     cursor: pointer;
+    background: none !important;
+    outline: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+    box-shadow: none; /* Remove any shadow effect */
+}
+
+.icon-button:hover, .icon-button:focus {
+    background: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.icon-button:focus-visible {
+    outline: none !important;
+}
+
+.social-icon {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Adds space between the icon and the border */
+    margin: 10px; /* Adds space between each icon */
+    background-color: transparent; /* Optional */
+}
+
+
+
+
+
+
+
+/* OR Divider */
+.or-divider {
+    color: white;
+    margin: 10px 0;
+    font-size: 14px;
+
+    /* display: block; */
+    margin-top: 15px; /* Adjust the value as needed */
+    margin-bottom: 25px; /* Adjust the value as needed */
+}
+
+
+
+:root {
+    --radius: 8px;
+    --primary: #377dff;
+    --foreground: #ffffff;
+    --border: #333333;
+}
+
+
+/* Flexbox for better alignment */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    margin-top: 12px;
+}
+
+/* Input fields */
+input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 4px;
+    width: 100%; /* Full width */
+}
+
+/* Style for the file input */
+.file-input-container {
+    position: relative;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.file-input {
+    opacity: 0;
+    position: absolute;
     width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
-.btn-register:hover {
-    background-color: #0056b3;
+.file-label {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 0px;
+    background-color: transparent;
+    color: #0cc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    border: 1px solid rgba(19, 138, 144);
 }
 
-.already-account {
+.file-label:hover {
+    background-color: #0cc;
+    color: black;
+}
+
+/* Show the selected file name */
+.file-name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: lightgray;
+}
+
+/* Submit button */
+button {
+    margin-top: 25px;
+    padding: 10px;
+    width: 100%; /* Full width for better fit */
+    background-color: #0cc;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0ff;
+}
+
+/* Account login text */
+.acountlogin {
+    font-size: 14px;
+    color: gray;
     margin-top: 15px;
     text-align: center;
 }
 
-.already-account a {
-    color: #007bff;
-    cursor: pointer;
+/* Login link */
+.acountlogin a {
+    color: #0f99a0;
+    text-decoration: none;
 }
 
-.already-account a:hover {
+.acountlogin a:hover {
     text-decoration: underline;
 }
 
-.message {
-    margin-top: 20px;
-    color: #28a745;
-    font-weight: bold;
-    text-align: center;
+/* Error messages */
+.error-message {
+    color: red;
+    font-size: 12px;
 }
 
-/* Responsiveness */
-@media (max-width: 600px) {
-    .registration-form {
-    padding: 15px;
-    }
 
-    .title {
-    font-size: 1.2rem;
-    }
+
+
+
+
+@media screen and (max-width: 970px) {
+    
 }
 
-@media (max-width: 768px) {
-    .registration-form {
-    padding: 20px;
-    }
+@media screen and (max-width: 800px) {
+    
+}
 
-    .title {
-    font-size: 1.4rem;
-    }
+@media screen and (max-width: 585px) {
+    
+}
+
+@media screen and (max-width: 510px) {
+    
 }

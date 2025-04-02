@@ -1,10 +1,104 @@
-<section class="hero">
-    <div class="hero-content">
-        <h1>Make Your Software Vision a Reality</h1>
-        <p>Pro tools created with 
-            <span class="highlight">developers</span>, 
-            <span class="highlight">teams</span>, and 
-            <span class="highlight">businesses</span> in mind.
-        </p>
+<header>
+    <div class="logo">
+        <a routerLink="#"> <img class="logo" src="./../../assets/images/EV-Logo.png"> </a> 
     </div>
+
+    <div class="menu-toggle">
+        <img src="./../../assets/images/menu-toggel.png" class="toggle" aria-hidden="true"> 
+    </div>
+
+    <nav>
+        <ul>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="#">About Us</a></li>
+            <li><a routerLink="#">Active Votes</a></li>
+            <li><a routerLink="/addnewvote">Add New Vote</a></li>
+            <li><a routerLink="#">Votes History</a></li>
+            <li><a routerLink="#"><img src="./../../assets/images/User-icon.png" title="Personal Information"></a></li>
+            <li><a class="act" routerLink="#">Logout</a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+
+<section class="landing-img">
+    <div class="layer">
+            <div class="landing-info">
+                <h1 class="large-heading">Vote with confidence</h1>
+                
+                <h2 class="large-heading2">Shape the Future!</h2>
+                <p class="para">Every vote counts! Join us in building a brighter future by casting your vote easily and securely.</p>
+
+                <div class="searchDiv">
+                    <input type="text" class="search-bar" placeholder="Search..." title="Search for a Vote by ID">
+                    <img src="./../../assets/images/search_icon.png" class="search_icon">
+                </div>
+            </div>
+    </div>
+
+    
+    <div class="business-section" id="areas">
+        
+    </div>
+
+    <div class="aboutPart">
+        <div class="about-divs">
+
+            <div class="about">
+                <h1 class="about-header"> Who We Are </h1>
+                <p class="para2">Welcome to our Blockchain-Based E-Voting System, 
+                    <br>
+                    a revolutionary platform designed to redefine the way elections are conducted.
+                    <br>Our mission is to provide a secure, transparent, and tamper-proof voting environment by leveraging the power of blockchain technology.
+                </p>
+                <button class="learnMore" routerLink="#" type="submit">Learn More</button>
+            
+            </div>
+            <img src="./../../assets/images/4.jpg" class="about-img">
+        
+        </div>
+    </div>
+
+
+
+    <div class="votePart">
+        <div class="vote-divs">
+
+            <img src="./../../assets/images/Capture2.png" class="voteBackground">
+
+
+            <div class="vote">
+                <p class="para3">Easy, Secure, and Fair Voting
+                    <br>
+                    - Cast Your Vote Now!
+                </p>
+                <button class="availableVotes" routerLink="#" type="submit">Show Active Votes</button>
+            
+            </div>
+            <img src="./../../assets/images/77.png" class="vote-img">
+        
+        </div>
+    </div>
+
+    <button class="btn" id="scrollToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 4l-6 6h4v10h4V10h4z"/>
+        </svg>
+    </button>
+
+    
+    <a routerLink="/addnewvote" class="addbtn" id="addVote" title="Add New Vote">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 4v8M12 12v8M4 12h8M12 12h8"/>
+        </svg>
+    </a>
+
+    <div class="votes">
+        
+    </div>
+        
+        
+        
 </section>
+<!--End of landing section-->

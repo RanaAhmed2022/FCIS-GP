@@ -1,19 +1,25 @@
+
 /* Overall Container */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black;
+    /* background-color: black; */
+    background-image: url(../../assets/images/loggg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 /* Login Box */
 .login-box {
-    background: #121212;
+    background: rgba(18, 18, 18, 0.7);
     border-radius: 12px;
     padding: 30px;
     width: 800px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 15px rgba(131, 131, 131, 0.4);
     text-align: center;
 
     /* Thin white border */
@@ -57,7 +63,7 @@
 .wallet-login {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
 }
 
 .wallet-title {
@@ -68,10 +74,11 @@
 }
 
 .wallet-button {
+    display: flex;
     background: #1e1e1e;
     color: white;
     border: none;
-    padding: 12px;
+    /* padding: 12px; */
     margin: 5px 0;
     border-radius: 8px;
     cursor: pointer;
@@ -130,11 +137,14 @@
     margin: 0 5px;
     cursor: pointer;
     background: none;
+    outline: none;
     transition: transform 0.2s ease-in-out;
 }
 
 .icon-button:hover {
     transform: scale(1.1);
+    background: transparent !important;
+    box-shadow: none;
 }
 
 .social-icon {
@@ -159,11 +169,11 @@
 /* OR Divider */
 .or-divider {
     color: white;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     font-size: 14px;
 
     /* display: block; */
-    margin-top: 25px; /* Adjust the value as needed */
+    margin-top: 35px; /* Adjust the value as needed */
     margin-bottom: 25px; /* Adjust the value as needed */
 }
 
@@ -179,40 +189,6 @@
     margin-bottom: 12px;
     font-size: 14px;
 }
-
-/* Input Container for Phone Input */
-/* .input-container {
-    display: flex;
-    align-items: center;
-    background: #1e1e1e;
-    border-radius: 6px;
-    padding: 10px;
-    margin-bottom: 12px;
-    width: 90%; /* Matches email input width 
-}
-
-.input-container .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.input-container input {
-    border: none;
-    background: transparent;
-    color: white;
-    width: 100%;
-    outline: none;
-    font-size: 14px;
-    padding: 6px;
-} */
-
-
-
-
-/* .contact-info {
-    margin-top: 15px; /* Moves both email and phone down 
-} */
 
 
 
@@ -251,24 +227,6 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* .email-button {
-    background-color: var(--primary);
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.email-button svg {
-    fill: var(--foreground);
-} */
-
-
-
-
-
 
 
 
@@ -299,32 +257,23 @@
 }
 
 
-
-
-
-
-
-
-
-/* Option Buttons */
-/* .option-button {
-    width: 100%;
-    background: #1e1e1e;
-    color: white;
+/* Submit button */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 55%; /* Full width for better fit */
+    background-color: #0cc;
+    color: black;
     border: none;
-    padding: 12px;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
-    margin: 6px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
+    font-size: 16px;
 }
 
-.option-button:hover {
-    background: #292929;
-} */
+button:hover {
+    background-color: #0ff;
+}
+
 
 /* Terms */
 .terms-text {
