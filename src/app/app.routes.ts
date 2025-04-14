@@ -4,6 +4,10 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AddnewvoteComponent } from './addnewvote/addnewvote.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ActivevotesComponent } from './activevotes/activevotes.component';
+import { VoteshistoryComponent } from './voteshistory/voteshistory.component';
+import { PersonalinfoComponent } from './personalinfo/personalinfo.component';
 
 export const routes: Routes = [
     {
@@ -30,6 +34,22 @@ export const routes: Routes = [
     {
         path : 'addnewvote',
         component : AddnewvoteComponent
+    },
+    {
+        path : 'aboutus',
+        component : AboutusComponent
+    },
+    {
+        path : 'activevotes',
+        component : ActivevotesComponent
+    },
+    {
+        path : 'voteshistory',
+        component : VoteshistoryComponent
+    },
+    {
+        path : 'personalinfo',
+        component : PersonalinfoComponent
     },
     {
         path : '**',

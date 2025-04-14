@@ -136,17 +136,17 @@ header nav ul li a.active,
 header nav ul li a:hover {
 	color: #00FFFF;
     border: 1px solid rgba(255, 255, 255, 0.3);
-	
+	background-color: transparent;
 	font-size: 15px;
 	transition: 0.5s;
 	border-radius: 8px;
 }
 
-/* .act {
-	background-color: #138a90;
+.act {
+	/* background-color: #138a90; */
     border: 1px solid rgba(255, 255, 255, 0.4);
 	border-radius: 8px;
-} */
+}
 
 header .menu-toggle {
 	float: right;
@@ -181,7 +181,7 @@ header .menu-toggle {
 	flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-image: url(../../assets/images/333.png);
 	
 	background-size: cover;
@@ -214,6 +214,7 @@ header .menu-toggle {
     width: 480px;
     box-shadow: 0px 4px 15px rgba(131, 131, 131, 0.8);
     text-align: center;
+	margin-bottom: 50px;
 }
 
 
@@ -230,6 +231,7 @@ header .menu-toggle {
 form {
     display: flex;
     flex-direction: column;
+	/* margin-bottom: 50px; */
 }
 
 
@@ -241,6 +243,41 @@ label {
 	margin: 25px auto 0;
 }
 
+.title{
+	position: absolute;
+	margin-left: 3px;
+}
+
+
+
+
+select {
+	margin-right: 170px;
+	width: 250px;
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	font-size: 16px;
+	color: #333;
+	appearance: none;       /* Hide default arrow for full customization */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	background-size: 20px;
+	cursor: pointer;
+}
+
+select:focus {
+	border-color: #007BFF;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+	outline: none;
+}
+
+
+
 .Mutability{
 	font-weight: bold;
 	font-size: large;
@@ -251,25 +288,11 @@ label {
 /* Input fields */
 input {
     padding: 10px;
-    /* margin-top: 5px; */
     margin-bottom: 12px;
     border: 1px solid black;
     border-radius: 4px;
     width: 80%; /* Full width */
 	margin: 25px auto 0;
-}
-
-/* Adjust radio button labels */
-.rad {
-    position: relative;
-    display: block;
-    margin-bottom: -20px; /* Adjust spacing */
-}
-
-.rad + label {
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
 }
 
 
@@ -292,28 +315,91 @@ button:hover {
 }
 
 
-/* Account login text */
-.acountlogin {
-    font-size: 14px;
-    color: gray;
-    margin-top: 15px;
-    text-align: center;
+/* Wrap input and label in a relative div */
+.input-container {
+    position: relative;
+    width: 95%;
+    margin: 10px auto;
+	margin-top: 20px;
 }
 
-/* Login link */
-.acountlogin a {
-    color: #0f99a0;
-    text-decoration: none;
+/* Style labels to be behind inputs */
+.input-container label {
+	font-size: medium;
+	position: relative;
+    right: 200px;
 }
 
-.acountlogin a:hover {
-    text-decoration: underline;
+
+
+/* Ensure input fields are on top */
+.input-container input,
+form textarea {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 4px;
+	cursor: pointer;
+	resize: none;
+	margin-bottom: 10px;
 }
 
-/* Error messages */
-.error-message {
-    color: red;
-    font-size: 12px;
+.date1{
+	font-size: medium;
+    margin-left: 7px;
+	margin-top: 265px;
+	position: absolute;
+}
+
+.date2{
+	font-size: medium;
+    margin-left: 7px;
+	margin-top: 365px;
+	position: absolute;
+}
+
+.bodyInput{
+	outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+
+.description{
+	font-size: medium;
+	position: relative;
+    margin-left: 50px;
+}
+
+/* Adjust radio buttons */
+.radio-container {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.radio-container label {
+    position: absolute;
+    left: 0px;
+    top: 10%;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0);
+}
+
+/* Ensure radio buttons stay on top */
+.radio-container input {
+    position: relative;
+	cursor: pointer;
+}
+
+
+input:focus {
+	border-color: #007BFF;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+	outline: none;
 }
 
 

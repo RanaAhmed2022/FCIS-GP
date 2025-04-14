@@ -12,6 +12,10 @@ body {
     font-family: Arial, sans-serif;
     color: #ffffff;
     background: black;
+
+	
+	overflow-x: hidden;
+	scroll-behavior: smooth; /* optional for better navigation experience */
 }
 
 a {

@@ -3,19 +3,16 @@ import { RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-addnewvote',
+  selector: 'app-personalinfo',
   imports: [RouterLink],
-  templateUrl: './addnewvote.component.html',
-  styleUrl: './addnewvote.component.css'
+  templateUrl: './personalinfo.component.html',
+  styleUrl: './personalinfo.component.css'
 })
-export class AddnewvoteComponent {
-  submitForm(ev : any){
-    ev.preventDefault()
-  }
-
+export class PersonalinfoComponent {
   constructor(private location: Location) {}
 
   goBack() {
     this.location.back(); // Goes one step back in history
   }
+
 }

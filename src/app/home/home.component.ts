@@ -31,28 +31,29 @@ export class HomeComponent implements OnInit{
 
      // Scroll Event Handling
 
-  this.renderer.listen(window, 'scroll', () => {
-    if (nav && btn) {
-      if (window.scrollY >= 250) {
-        this.renderer.removeClass(nav, 'navdefault');
-        this.renderer.addClass(nav, 'navscroll');
-        this.renderer.setStyle(btn, 'display', 'block');
-      } else {
-        this.renderer.addClass(nav, 'navdefault');
-        this.renderer.removeClass(nav, 'navscroll');
-        this.renderer.setStyle(btn, 'display', 'none');
+    this.renderer.listen(window, 'scroll', () => {
+      if (nav && btn) {
+        if (window.scrollY >= 250) {
+          this.renderer.removeClass(nav, 'navdefault');
+          this.renderer.addClass(nav, 'navscroll');
+          this.renderer.setStyle(btn, 'display', 'block');
+        } else {
+          this.renderer.addClass(nav, 'navdefault');
+          this.renderer.removeClass(nav, 'navscroll');
+          this.renderer.setStyle(btn, 'display', 'none');
+        }
       }
+        
+    })
+
+    // Scroll to Top Button
+    if (btn) {
+      this.renderer.listen(btn, 'click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
     }
-      
-  })
-
-  // Scroll to Top Button
-  if (btn) {
-    this.renderer.listen(btn, 'click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-  }
   
 
-}}
+  }
+}

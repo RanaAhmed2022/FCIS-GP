@@ -6,7 +6,7 @@
     align-items: center;
     height: 100vh;
     /* background-color: black; */
-    background-image: url(../../assets/images/loggg.jpg);
+    background-image: url(../../assets/images/background.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -15,7 +15,7 @@
 
 /* Login Box */
 .login-box {
-    background: rgba(18, 18, 18, 0.7);
+    background: rgba(18, 18, 18, 0.9);
     border-radius: 12px;
     padding: 30px;
     width: 800px;
