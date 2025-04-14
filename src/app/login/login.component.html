@@ -63,6 +63,12 @@
                             <input type="tel" placeholder="Phone number">
                         </div>
 
+                        <div class="file-input-container">
+                            <label for="id-front" class="file-label">Upload National ID Front Image</label>
+                            <input type="file" id="id-front" class="file-input" onchange="displayFileName(this)">
+                            <p class="file-name" id="file-name">No file chosen</p>
+                        </div>
+
 
                         <button routerLink="/home" type="submit">Login</button>
 

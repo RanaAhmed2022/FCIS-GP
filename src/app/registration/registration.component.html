@@ -50,11 +50,11 @@
                         <p class="file-name" id="file-name">No file chosen</p>
                     </div>
                     
-                    <input type="password" placeholder="Password" id="password" required>
-                    <p id="passwordError" class="error-message"></p>
-                    
-                    <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
-                    <p id="passwordMatchError" class="error-message"></p>
+                    <div class="file-input-container">
+                        <label for="id-front" class="file-label">Upload Your Image</label>
+                        <input type="file" id="id-front" class="file-input" onchange="displayFileName(this)">
+                        <p class="file-name" id="file-name">No file chosen</p>
+                    </div>
                     
                     
                     <button type="submit">Regist</button>
