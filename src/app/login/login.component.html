@@ -1,7 +1,7 @@
 <!-- Updated login.component.html -->
 <div class="login-container">
     <div class="layer">
-        <div class="login-box" (submit)="submitForm($event)">
+        <div class="login-box">
             <div class="login-options">
                 <!-- Left Side: Wallet & Social Login -->
                 <div class="wallet-login">
@@ -33,20 +33,29 @@
                         </button>
                     </div>
                     <p class="or-divider">_______ or _______</p>
-                    <!-- <input type="email" placeholder="Email address" class="input-field"> -->
-                    <!-- <div class="input-container">
-                        <img src="./../../assets/images/phone-icon.png" class="icon">
-                        <input type="tel" placeholder="Phone number" class="input-field">
-                    </div> -->
 
 
-
-
-                    <div class="contact-info">
-                        <div class="email-container" id="email">
-                            <input type="email" placeholder="Email address" class="email-input">
-                            
+                    <form (submit)="submitForm($event)">
+                        <input type="text" placeholder="Phone Number" id="phone" pattern="^(011|012|010|015)\d{8}$" title="Phone must start with 011, 012, 010, or 015 and be 11 digits long" required>
+                        
+                        <input type="email" placeholder="Email" id="email" pattern=".*@gmail\.com$" title="Email must be a Gmail address" required>
+                        
+                        <div class="camera-section">
+                            <video #video autoplay playsinline></video>
+                            <button class="camera-frame" *ngIf="!photoCaptured" (click)="capturePhoto()">Capture Photo</button>
+                            <canvas #canvas hidden></canvas>
                         </div>
+
+                        <button *ngIf="photoCaptured" (click)="tryAgain()" class="camera_try">Try Again</button>
+
+
+                        <button routerLink="/home" type="submit">Login</button>
+    
+                    </form>
+                    
+
+                    <!-- <div class="contact-info">
+                        
         
         
                         <div class="phone-input" id="phone">
@@ -63,23 +72,7 @@
                             <input type="tel" placeholder="Phone number">
                         </div>
 
-                        <div class="file-input-container">
-                            <label for="id-front" class="file-label">Upload Your Front Image</label>
-                            <input type="file" id="id-front" class="file-input" onchange="displayFileName(this)">
-                            <p class="file-name" id="file-name">No file chosen</p>
-                        </div>
-
-
-                        <button routerLink="/home" type="submit">Login</button>
-
-                    </div>
-                    
-                    
-
-
-
-
-
+                    </div> -->
 
                     <p class="terms-text">Create a new account, <a routerLink="/registration">Sign up</a></p>
                 </div>

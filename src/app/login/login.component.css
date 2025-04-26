@@ -18,7 +18,7 @@
     background: rgba(18, 18, 18, 0.9);
     border-radius: 12px;
     padding: 30px;
-    width: 800px;
+    width: 680px;
     box-shadow: 0px 4px 15px rgba(131, 131, 131, 0.4);
     text-align: center;
 
@@ -74,19 +74,19 @@
 }
 
 .wallet-button {
-    display: flex;
-    background: #1e1e1e;
-    color: white;
-    border: none;
+    display: flex;/**/
+    background: #1e1e1e;/**/
+    color: white;/**/
+    border: none;/**/
     /* padding: 12px; */
-    margin: 5px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: left;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    transition: background 0.3s ease;
+    margin: 5px 0;/**/
+    border-radius: 8px;/**/
+    cursor: pointer;/**/
+    /* text-align: left; */
+    font-size: 14px;/**/
+    /* display: flex; */
+    align-items: center;/**/
+    transition: background 0.3s ease;/**/
 }
 
 .wallet-button:hover {
@@ -109,7 +109,7 @@
 
 /* Right Side (Login Options) */
 .auth-login {
-    width: 50%;
+    width: 55%;
     text-align: center;
 }
 
@@ -123,22 +123,25 @@
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    margin-right: 50px;
+    /* margin-bottom: 10px;
+    margin-right: 50px; */
 
 }
 
 /* Social Icons */
 .icon-button {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: none;
-    margin: 0 5px;
-    cursor: pointer;
-    background: none;
-    outline: none;
-    transition: transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;/**/
+    height: 42px;/**/
+    border-radius: 50%;/**/
+    border: none;/**/
+    margin: 10px 5px;/**/
+    cursor: pointer;/**/
+    background: none;/**/
+    outline: none;/**/
+    transition: transform 0.2s ease-in-out;/**/
 }
 
 .icon-button:hover {
@@ -169,11 +172,11 @@
 /* OR Divider */
 .or-divider {
     color: white;
-    /* margin: 10px 0; */
+    margin: 10px 0;
     font-size: 14px;
 
     /* display: block; */
-    margin-top: 35px; /* Adjust the value as needed */
+    margin-top: 15px; /* Adjust the value as needed */
     margin-bottom: 25px; /* Adjust the value as needed */
 }
 
@@ -205,17 +208,17 @@
     border: 1px solid hsl(0, 0%, 15%);
     border-radius: 8px;
     /* padding: 12px; */
-    gap: 12px;
+    /* gap: 12px; */
     background: none;
     width: 100%;
     max-width: 300px;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-bottom: 15px;
 }
 
 .email-input {
     flex-grow: 1;
-    padding: 12px;
+    /* padding: 12px; */
     border: none;
     background: transparent;
     color: var(--foreground);
@@ -322,7 +325,7 @@ input {
 button {
     margin-top: 15px;
     padding: 10px;
-    width: 55%; /* Full width for better fit */
+    width: 65%; /* Full width for better fit */
     background-color: #0cc;
     color: black;
     border: none;
@@ -353,3 +356,70 @@ button:hover {
     color: gray;
     margin-top: 10px;
 }
+
+
+
+.camera-frame{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 50%; /* Full width for better fit */
+    background-color: transparent;
+    color: #0cc;
+    border: 1px solid rgba(19, 138, 144);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.camera-frame:hover{
+    background-color: transparent;
+    color: #0cc;
+    border: 1px solid rgba(19, 138, 144);
+    scale: 1.1;
+}
+
+
+
+.camera_try{
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 50%; /* Full width for better fit */
+    background-color: transparent;
+    color: #0cc;
+    border: 1px solid rgba(19, 138, 144);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.camera_try:hover{
+    background-color: transparent;
+    color: #0cc;
+    border: 1px solid rgba(19, 138, 144);
+    scale: 1.1;
+}
+
+
+
+.camera-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+video {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.preview-img {
+    width: 300px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
