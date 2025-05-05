@@ -1,6 +1,15 @@
 import { Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Import CommonModule
+import { ThirdwebSDK } from '@thirdweb-dev/sdk/evm';
+import { ethers } from 'ethers';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import firebase from 'firebase/compat/app';
+// import { Buffer } from 'buffer';
+import { inject } from '@angular/core';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+
 
 @Component({
   selector: 'app-login',
@@ -10,6 +19,67 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 })
 
 export class LoginComponent implements AfterViewInit {
+  // implements AfterViewInit  mkano fy 2lsatr 2ly fo2 ganb LoginComponent
+
+  // constructor(private afAuth: AngularFireAuth, private router: Router) {}
+
+  // loginWithGoogle() {
+  //   const auth = getAuth();
+  //   const provider = new GoogleAuthProvider();
+  
+  //   signInWithPopup(auth, provider)
+  //     .then((result) => {
+  //       console.log('User signed in:', result.user);
+  //       this.router.navigate(['/home']);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error during sign-in:', error);
+  //     });
+  // }
+
+
+  // ngOnInit() {
+  //   console.log('LoginComponent initialized');
+  // }
+
+  walletAddress: string = '';
+
+  async connectWithMetaMask() {
+    try {
+      const win = window as any;
+
+      // تأكد إن MetaMask موجودة
+      if (!win.ethereum) {
+        alert('Please Download MetaMask first');
+        return;
+      }
+
+      const provider = new ethers.providers.Web3Provider(win.ethereum);
+
+      // افتح محفظة MetaMask
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const address = await signer.getAddress();
+
+      // خزن العنوان في المتغير
+      this.walletAddress = address;
+
+      // Thirdweb SDK
+      const sdk = new ThirdwebSDK(signer);
+
+      console.log("Wallet Connecet:", address);
+
+    } catch (err: any) {
+      console.error("There is an error in MetaMask:", err.message || err);
+    }
+  }
+
+
+
+
+
+
+
 
   @ViewChild('video') video!: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvas!: ElementRef<HTMLCanvasElement>;

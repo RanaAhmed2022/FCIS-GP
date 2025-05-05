@@ -276,6 +276,12 @@ select:focus {
 	outline: none;
 }
 
+.add_option{
+	position: absolute;
+	margin-top: 465px;
+	margin-left: 10px;
+}
+
 
 
 .Mutability{
@@ -340,7 +346,7 @@ form textarea {
     border: 1px solid black;
     width: 100%;
     border-radius: 4px;
-	cursor: pointer;
+	cursor: text;
 	resize: none;
 	margin-bottom: 10px;
 }

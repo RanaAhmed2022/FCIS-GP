@@ -1,3 +1,27 @@
+<header>
+    <div class="logo">
+        <a routerLink="#"> <img class="logo" src="./../../assets/images/EV-Logo.png"> </a> 
+    </div>
+
+    <div class="menu-toggle">
+        <img src="./../../assets/images/menu-toggel.png" class="toggle" aria-hidden="true"> 
+    </div>
+
+    <nav>
+        <ul>
+            <!-- <li><a class="act" routerLink="/home">Home</a></li> -->
+            <li><a routerLink="/aboutus">About Us</a></li>
+            <li><a routerLink="/activevotes">Active Votes</a></li>
+            <li><a routerLink="/addnewvote">Add New Vote</a></li>
+            <li><a routerLink="/voteshistory">Votes History</a></li>
+            <!-- <li><a routerLink="/personalinfo"><img src="./../../assets/images/User-icon.png" title="Personal Information"></a></li> -->
+            
+        </ul>
+    </nav>
+    
+</header>
+
+
 <div class="welcome-container">
     <!-- Left Side - Text -->
     <div class="text-container">
@@ -15,3 +39,61 @@
         <a routerLink="/registration" class="action-button">Sign Up</a>
     </div>
 </div>
+
+
+<section class="landing-img">
+
+    <div class="aboutPart">
+        <div class="about-divs">
+
+            <div class="about">
+                <h1 class="about-header"> Who We Are </h1>
+                <p class="para2">Welcome to our Blockchain-Based E-Voting System, 
+                    <br>
+                    a revolutionary platform designed to redefine the way elections are conducted.
+                    <br>Our mission is to provide a secure, transparent, and tamper-proof voting environment by leveraging the power of blockchain technology.
+                </p>
+                <button class="learnMore" routerLink="/aboutus" type="submit">Learn More</button>
+            
+            </div>
+            <img src="./../../assets/images/4.jpg" class="about-img">
+        
+        </div>
+    </div>
+
+
+
+    <div class="votePart">
+        <div class="vote-divs">
+
+            <img src="./../../assets/images/Capture2.png" class="voteBackground">
+
+
+            <div class="vote">
+                <p class="para3">Easy, Secure, and Fair Voting
+                    <br>
+                    - Cast Your Vote Now!
+                </p>
+                <button class="availableVotes" routerLink="/activevotes" type="submit">Show Active Votes</button>
+            
+            </div>
+            <img src="./../../assets/images/77.png" class="vote-img">
+        
+        </div>
+    </div>
+
+    <button class="btn" id="scrollToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 4l-6 6h4v10h4V10h4z"/>
+        </svg>
+    </button>
+
+    
+    <a routerLink="/addnewvote" class="addbtn" id="addVote" title="Add New Vote">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 4v8M12 12v8M4 12h8M12 12h8"/>
+        </svg>
+    </a>
+
+</section>
+

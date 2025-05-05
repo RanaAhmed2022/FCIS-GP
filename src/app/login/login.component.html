@@ -5,9 +5,10 @@
             <div class="login-options">
                 <!-- Left Side: Wallet & Social Login -->
                 <div class="wallet-login">
-                    <button class="wallet-button">
+                    <button (click)="connectWithMetaMask()" class="wallet-button">
                         <img src="assets/images/metaMask.jpg" class="icon"> MetaMask
                     </button>
+                    <p *ngIf="walletAddress">Address: {{ walletAddress }}</p>
                     <button class="wallet-button">
                         <img src="assets/images/coinbase.jpg" class="icon"> Coinbase Wallet
                     </button>
