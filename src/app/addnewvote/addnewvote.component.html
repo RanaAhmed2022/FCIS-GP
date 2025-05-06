@@ -52,11 +52,15 @@
                 <input type="date" id="end-date" required>
             </div>
 
-            <label class="add_option" for="op" >Options</label>
-            <div class="input-container">
-                <input type="text" class="bodyTitle" placeholder="Type Option 1" required>
-                <input type="text" class="bodyTitle" placeholder="Type Option 2" required>
+            <div class="input-container" *ngFor="let option of options; let i = index">
+                <label class="add_option">Option {{ i + 1 }}:</label>
+                <input class="bodyTitle" type="text" placeholder="Add Option {{ i + 1 }}" (input)="updateOption(i, $any($event.target).value)" />
+
             </div>
+            
+            <button class="newopbtn" type="button" (click)="addOption()">Add another option</button>
+            
+            <br /><br />
 
             <label class="Mutability">Vote Mutability</label>
 

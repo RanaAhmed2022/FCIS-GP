@@ -278,8 +278,35 @@ select:focus {
 
 .add_option{
 	position: absolute;
-	margin-top: 465px;
-	margin-left: 10px;
+	/* margin-top: 65px; */
+	margin-left: 35px;
+}
+
+
+.new_op{
+	display: flex;
+	flex-direction: column;
+}
+
+
+.newopbtn{
+	margin-top: 25px;
+    padding: 10px;
+    width: 30%; /* Full width for better fit */
+	/* margin: 25px auto 0; */
+	margin-right: 290px;
+    background-color: transparent;
+    color: rgb(26, 69, 69);
+    border: 1px solid  rgb(26, 69, 69);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.newopbtn:hover{
+	background-color: transparent;
+    color: rgb(26, 69, 69);
+	scale: 1.05;
 }
 
 
