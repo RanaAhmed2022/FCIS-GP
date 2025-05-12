@@ -1,15 +1,57 @@
-import { Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Import CommonModule
+import { ThirdwebSDK } from '@thirdweb-dev/sdk/evm';
+import { ethers } from 'ethers';
+// import { AngularFireAuth } from '@angular/fire/compat/auth';
+// import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css'] 
 })
 
 export class LoginComponent implements AfterViewInit {
+
+
+
+  walletAddress: string = '';
+
+  async connectWithMetaMask() {
+    try {
+      const win = window as any;
+
+      // تأكد إن MetaMask موجودة
+      if (!win.ethereum) {
+        alert('Please Download MetaMask first');
+        return;
+      }
+
+      const provider = new ethers.providers.Web3Provider(win.ethereum);
+
+      // افتح محفظة MetaMask
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const address = await signer.getAddress();
+
+      // خزن العنوان في المتغير
+      this.walletAddress = address;
+
+      // Thirdweb SDK
+      const sdk = new ThirdwebSDK(signer);
+
+      console.log("Wallet Connecet:", address);
+
+    } catch (err: any) {
+      console.error("There is an error in MetaMask:", err.message || err);
+    }
+  }
+
+
+
 
   @ViewChild('video') video!: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvas!: ElementRef<HTMLCanvasElement>;
