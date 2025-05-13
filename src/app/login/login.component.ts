@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import { ThirdwebSDK } from '@thirdweb-dev/sdk/evm';
 import { ethers } from 'ethers';
@@ -11,7 +10,7 @@ import { ethers } from 'ethers';
   selector: 'app-login',
   imports: [RouterLink],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'] 
+  styleUrl: './login.component.css'
 })
 
 export class LoginComponent implements AfterViewInit {
